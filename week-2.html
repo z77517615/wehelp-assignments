@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"></meta>
+<title>week-2 assignments</title>	 
+<script type="text/Javascript">
+
+//要求一：函式與流程控制 //
+function calculate(min, max){
+    var sum=0;
+    for (n=min;n<=max;n++){
+      sum=sum+n;
+    }
+    console.log(sum);
+}
+    calculate(1, 3);  //你的程式要能夠計算 1+2+3，最後印出 6 
+    calculate(4, 8);  //你的程式要能夠計算 4+5+6+7+8，最後印出 30 
+    
+
+// 要求二：Python 字典與列表、JavaScript 物件與陣列
+function avg(data){
+   let sum=0;
+   data.employees.forEach((item) => {
+   sum += item.salary;
+    return sum;
+
+});
+money=sum/data.count
+console.log(money)
+};
+
+avg({
+"count":3,"employees":
+[{"name":"John","salary":30000},
+{"name":"Bob","salary":60000},
+{"name":"Jenny","salary":50000}
+]}); 
+
+// # # 要求三：演算法
+function maxProduct(nums){        
+    if(2<nums.length){
+        var max=0
+        for(i=0;i<=nums.length-2;i++){
+            for(j=1;j<=nums.length-1;j++){
+                if(i != j){
+                    product=nums[i]*nums[j]
+                    if (max<=product){
+                        max=product;   
+                    } 
+                }
+            }
+        } 
+        console.log(max);       
+    }else{
+        max=nums[0]*nums[1];
+        console.log(max)
+    }}
+        
+
+maxProduct([5, 20, 2, 6]) // 得到 120
+maxProduct([10, -20, 0, 3]) // 得到 30
+maxProduct([-1, 2]) // 得到 -2
+maxProduct([-1, 0, 2]) // 得到 0
+maxProduct([-1, -2, 0]) // 得到 2
+
+
+
+
+// # 要求四 ：演算法
+function twoSum(nums, target){
+    for(i=0;i<=nums.length-2;i++){
+            for(j=1;j<=nums.length-1;j++){
+                if(nums[i]+nums[j]==target){
+                    var result=[i,j]
+                    return result;
+                }}}
+}
+
+let result=twoSum([2, 11, 7, 15], 9);
+console.log(result); 
+
+</script>
+</head>
+<body>
+   
+</body>
+</html>
