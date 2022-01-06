@@ -25,10 +25,10 @@ avg({"count":3,"employees":
 # # 要求三：演算法
 # 解法一:時間複雜度:O(n^2)
 def maxProduct(nums):
-    if len(nums)>2:
+    if len(nums)>2:   
         max=0
-        for x in (nums) :
-            for y  in (nums):
+        for x in (nums) :  //n
+            for y  in (nums):  //n
                 if x==y :
                     continue
                 result=(x*y)
@@ -39,7 +39,7 @@ def maxProduct(nums):
     else: print(nums[0]*nums[1])  
 
 # # 要求三：演算法
-# 解法二:時間複雜度:O(n)
+# 解法二:時間複雜度:O(n^2)
 def maxProduct(nums):
     nums=sorted(nums)
     if len(nums)<=2:
