@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="week-3.css"/>
+	<title>week-3</title>
+<script type="text/javascript">
+
+function getData(sum){
+        var requestURL="https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json"
+        var request = new XMLHttpRequest();
+        request.open("GET",requestURL);
+        request.responseType="json"
+        request.send();
+        request.onload=function(){
+        var view=request.response;
+        title(view);
+        }
+        function title(jsonObj){
+            var name=jsonObj["result"]["results"]
+            for(i=0;i<=sum;i++){
+                let newname=name[i]["stitle"]
+                let src=name[i]["file"]
+                let split1=src.split("https:")
+                let split2=split1.shift()
+
+                var newDiv=document.createElement("div");
+                var aTag=document.createElement("img");
+                var title=document.createElement("p")
+                document.getElementById("container").appendChild(newDiv);
+                newDiv.appendChild(aTag)
+                newDiv.appendChild(title)
+                newDiv.setAttribute("id","div1")
+                aTag.setAttribute("id","picwidth")
+
+                title.textContent=newname
+                aTag.src="https:"+split1[0]
+                   
+                
+}}};
+
+</script>
+
+
+</head>
+<body onload="getData(7);"> 
+    <input type="checkbox" id="manu_control">
+	<div class="header">
+		<div class="logo">My Website
+		<label for="manu_control" class="manu_btn">
+		<span>☰</span> </label>
+		</div>
+		<div class="items">
+			<ul>Item 1</ul>
+			<ul>Item 2</ul>
+			<ul>Item 3</ul>
+			<ul>Item 4</ul>
+		</div>
+	</div>
+    <div class="head">Welcome My Home</div>
+		<div id="container"> 
+		</div>
+	<button onclick="count();" class="btn">Load More</button>
+
+
+</body>
+</html>
