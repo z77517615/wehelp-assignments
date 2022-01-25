@@ -17,4 +17,4 @@
 ![image](https://user-images.githubusercontent.com/94062367/150900675-fa355cfa-917b-4ce5-8c6d-9dd5a316256a.png)
 
 ● 使用 UPDATE 指令更新欄位 username 是 test 的會員資料，將資料中的 name 欄位改成 test2<br/>
-![image](https://user-images.githubusercontent.com/94062367/150900968-cf07686e-a2e9-44e2-953f-31e4c1fcae26.png)
+![image](https://user-images.githubusercontent.com/94062367/150901085-e5f68cfd-ff4a-47b9-93ad-c6799ce03c73.png)
