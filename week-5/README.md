@@ -32,7 +32,11 @@
 ● 取得 member 資料表中，所有會員 follower_count 欄位的總和。<br/>
 ● 取得 member 資料表中，所有會員 follower_count 欄位的平均數<br/>
 ![image](https://user-images.githubusercontent.com/94062367/150903537-d235a372-aee2-4602-ba69-3e82fb085c0e.png)
-
+<br/>
+<br/>
+要求五：SQL JOIN (Optional)<br/>
+1. 在資料庫中，建立新資料表，取名字為 message。資料表中必須包含以下欄位設定：<br/>
+![image](https://user-images.githubusercontent.com/94062367/150906499-44150ce3-a806-49d5-8ac9-d0cdc84704f0.png)
 
 
 
