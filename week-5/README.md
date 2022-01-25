@@ -25,10 +25,14 @@
 ● 取得 member 資料表中，總共有幾筆資料 ( 幾位會員 )。<br/>
 ![image](https://user-images.githubusercontent.com/94062367/150902163-7f386291-6bd2-4da1-9ca0-6d2745f2c5ed.png)
 <br/>
-● 取得 member 資料表中，所有會員 follower_count 欄位的總和。<br/>
+<br/>
 更新follower_count 資訊<br/>
 ![image](https://user-images.githubusercontent.com/94062367/150903216-b2d110a8-df6c-457d-aefd-9868e99238f2.png)
-![image](https://user-images.githubusercontent.com/94062367/150903306-fd23463c-428e-4ffb-a89c-b5bbcfe8accd.png)
+<br/>
+● 取得 member 資料表中，所有會員 follower_count 欄位的總和。<br/>
+● 取得 member 資料表中，所有會員 follower_count 欄位的平均數<br/>
+![image](https://user-images.githubusercontent.com/94062367/150903537-d235a372-aee2-4602-ba69-3e82fb085c0e.png)
+
 
 
 
