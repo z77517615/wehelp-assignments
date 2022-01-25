@@ -11,3 +11,10 @@
 ● 使用 SELECT 指令取得 member 資料表中第 2 ~ 4 共三筆資料，並按照 time 欄位，由近到遠排序。( 並非編號 2、3、4 的資料，而是排序後的第 2 ~ 4 筆資料 )<br/>
 ![image](https://user-images.githubusercontent.com/94062367/150900267-199d5f95-35e7-48be-9b44-676ff8af81e8.png)
 
+● 使用 SELECT 指令取得欄位 username 是 test 的會員資料。<br/>
+在此新增id = 6 , Rob uersname = test , password = key<br/>
+![image](https://user-images.githubusercontent.com/94062367/150900649-4ee114b6-ae4a-45d3-ae3b-2a48206d55bd.png)
+![image](https://user-images.githubusercontent.com/94062367/150900675-fa355cfa-917b-4ce5-8c6d-9dd5a316256a.png)
+
+
+
