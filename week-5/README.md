@@ -18,3 +18,17 @@
 
 ● 使用 UPDATE 指令更新欄位 username 是 test 的會員資料，將資料中的 name 欄位改成 test2<br/>
 ![image](https://user-images.githubusercontent.com/94062367/150901085-e5f68cfd-ff4a-47b9-93ad-c6799ce03c73.png)
+<br/>
+<br/>
+<br/>
+要求四：SQL Aggregate Functions<br/>
+● 取得 member 資料表中，總共有幾筆資料 ( 幾位會員 )。<br/>
+![image](https://user-images.githubusercontent.com/94062367/150902163-7f386291-6bd2-4da1-9ca0-6d2745f2c5ed.png)
+<br/>
+● 取得 member 資料表中，所有會員 follower_count 欄位的總和。<br/>
+更新follower_count 資訊
+![image](https://user-images.githubusercontent.com/94062367/150903216-b2d110a8-df6c-457d-aefd-9868e99238f2.png)
+![image](https://user-images.githubusercontent.com/94062367/150903306-fd23463c-428e-4ffb-a89c-b5bbcfe8accd.png)
+
+
+
