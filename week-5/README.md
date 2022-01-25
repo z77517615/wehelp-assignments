@@ -35,8 +35,14 @@
 <br/>
 <br/>
 要求五：SQL JOIN (Optional)<br/>
-1. 在資料庫中，建立新資料表，取名字為 message。資料表中必須包含以下欄位設定：<br/>
+在資料庫中，建立新資料表，取名字為 message。資料表中必須包含以下欄位設定：<br/>
 ![image](https://user-images.githubusercontent.com/94062367/150906499-44150ce3-a806-49d5-8ac9-d0cdc84704f0.png)
+<br/>
+● 使用 SELECT 搭配 JOIN 語法，取得所有留言，結果須包含留言者會員的姓名。<br/>
+![image](https://user-images.githubusercontent.com/94062367/150914959-d2417387-96da-48c8-8215-15cb2ee0cc5a.png)
+<br/>
+● 使用 SELECT 搭配 JOIN 語法，取得 member 資料表中欄位 username 是 test 的所有留言，資料中須包含留言者會員的姓名。<br/>
+![image](https://user-images.githubusercontent.com/94062367/150915896-3301dc87-e0c7-4637-b77f-6736c3a86df9.png)
 
 
 
