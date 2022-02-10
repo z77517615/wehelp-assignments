@@ -20,7 +20,7 @@ function getData(sum){
         }
         function title(jsonObj){
             var name=jsonObj["result"]["results"]
-            for(i=0;i<=sum;i++){
+            for(i=sum-7;i<=sum;i++){
                 let newname=name[i]["stitle"]
                 let src=name[i]["file"]
                 let split1=src.split("https:")
@@ -37,10 +37,16 @@ function getData(sum){
 
                 title.textContent=newname
                 aTag.src="https:"+split1[0]
-                   
-                
-}}};
-
+                };
+}};
+let max=8;
+let sum=7;
+function count(){
+    if (sum<=Infinity){
+        sum=sum+max;
+        getData(sum);
+    }sum=sum+8;
+}
 </script>
 
 

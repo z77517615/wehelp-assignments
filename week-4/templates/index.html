@@ -37,7 +37,16 @@
 
     </head>
     <body>
-        <h2>歡迎光臨請輸入帳號密碼</h2>
+        <h2>歡迎光臨,請註冊登入系統</h2>
+        <h3>註冊帳號</h3>
+        <form action="/signup", method="POST">
+            <div class="content">姓名&nbsp;<input class="input" type="text" name="name"/></div>
+            <div class="content">帳號&nbsp;<input class="input" type="text" name="account"/></div>
+            <div class="content">密碼&nbsp;<input class="input" type="text" name="password"/></div>
+            <div class="content"><button>註冊</button></div>
+
+        </form>   
+
         <h3>登入系統</h3>
         <form action="/signin", method="POST">
             <div class="content">帳號&nbsp;<input class="input" type="text" name="account"/></div>

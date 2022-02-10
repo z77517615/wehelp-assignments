@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import Blueprint
 from flask import session
 from flask import request
 from flask import redirect
@@ -15,6 +16,7 @@ mycursor = mydb.cursor()
 
 app=Flask( __name__,static_folder="templates", static_url_path="/" )
 app.secret_key="123123123"  
+app.register_blueprint()
 
 
 
