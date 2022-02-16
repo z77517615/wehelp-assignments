@@ -1,5 +1,4 @@
 from flask import Flask
-from flask import Blueprint
 from flask import session
 from flask import request
 from flask import redirect
@@ -16,7 +15,7 @@ mycursor = mydb.cursor()
 
 app=Flask( __name__,static_folder="templates", static_url_path="/" )
 app.secret_key="123123123"  
-app.register_blueprint()
+
 
 
 
@@ -86,5 +85,28 @@ def signout():
     session.pop("account", None)
     return redirect("/")
 
-app.run(port=3000)    
+
+#查詢
+@app.route("/api/members")
+def api_members():
+    if "account" in session:
+        username=request.args.get("username")
+        sql="SELECT id,name,username FROM member WHERE username = %s"
+        val=(username,)
+        mycursor.execute(sql,val)
+        record=mycursor.fetchone()
+        if record:
+            data = { "data":{
+                "id" : record[0],
+                "name" : record[1],
+                "username":record[2]
+            }}
+            return (data)
+        else:
+            return { "data": None
+            }
+
+
+
+app.run(port=3000,debug=True)    
 

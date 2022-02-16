@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>登入頁面</title>
-        <style type="text/css">
-
-            h2{
-                height:100px;
-                font-size:30px;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                font-size:bold;
-                background-color:rgb(40, 37, 66);
-                color:white;
-            }
-
-            .content{
-                font-size:30px;
-                margin-top:70px;
-                margin-bottom:10px;
-                text-align:center;
-                font-size:bold;
-            }
-
-        </style>
-
+    <meta charset="utf-8">
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="/member.css"></style>
+ 
     </head>
     <body>
+ 
         <h2>歡迎光臨，這是會員頁</h2>
         <div class="content">{{namemassage}}， 歡迎登入系統<br>
             <a href="/signout">登出系統</a>
         </div>
 
+        <div class="search">
+            <h3>查詢會員姓名</h3>
+            <div>
+                <input type="text">
+                <button onclick="search()">查詢</button>
+            </div>
+            <p></p>
+        </div>
+    <script type="text/Javascript">
+    function search(){
+        let username=document.querySelector('input').value;
+        let searchResult = document.querySelector('p');
+        let src = `http://127.0.0.1:3000//api/members?username=${username}`;
 
-        </form>   
-
+        fetch(src).then(res => res.json())
+        .then(data => {
+            const name = data['data']['name']
+            const username =  data['data']['username']
+            searchResult.innerHTML = `${name}(${username})`           
+        })
+    };
+        </script>
     </body>
 </html>
