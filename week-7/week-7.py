@@ -44,8 +44,9 @@ def signup():
         if password=="":
             return redirect("/error?massage=密碼不能為空")
            
-        sql = "SELECT username FROM member WHERE username = '"+ account + "'"
-        mycursor.execute(sql)
+        sql = "SELECT username FROM member WHERE username = %s"
+        val=(account,)
+        mycursor.execute(sql,val)
         records=mycursor.fetchall()
         if (len(records)) ==0:
             sql="INSERT INTO member (name,username,password) VALUES (%s, %s ,%s )"
@@ -65,8 +66,9 @@ def error():
 def signin():
     account=request.form["account"]
     password=request.form["password"]
-    sql="SELECT name, username, password  FROM member WHERE username ='"+ account + "' AND password ='"+ password + "'"
-    mycursor.execute(sql)
+    sql="SELECT name, username, password  FROM member WHERE username =%s AND password =%s"
+    val=(account, password,)
+    mycursor.execute(sql, val)
     records=mycursor.fetchall()
     if len(records)==1: 
         name=records[0][0]
