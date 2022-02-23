@@ -4,12 +4,27 @@ from flask import request
 from flask import redirect
 from flask import render_template
 import mysql.connector 
+from mysql.connector import pooling
 
-mydb = mysql.connector.connect(host='localhost',
-                                    port='3306',
-                                    user='root',
-                                    password='password',
-                                    database='website')
+poolname='mysqlpool'
+poolsize=3
+
+dbconfig={'host':'localhost',
+        'user':'root',
+        'password':'password',
+        'database':'website'}
+
+connectionpool=mysql.connector.pooling.MySQLConnectionPool(
+                                            pool_name=poolname,
+                                            pool_reset_session='True',
+                                            pool_size=poolsize,
+                                            **dbconfig)
+                                            
+connection=connectionpool.get_connection()
+print(connectionpool.pool_name)
+print(connectionpool.pool_size)
+mydb = mysql.connector.connect(port='3306',
+                                **dbconfig)
 
 mycursor = mydb.cursor()
 
